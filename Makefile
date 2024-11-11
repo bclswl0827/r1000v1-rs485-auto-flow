@@ -1,4 +1,4 @@
-.PHONY: all clean install dkms_install dkms_make_deb
+.PHONY: all clean install dkms_install
 
 MODULE_NAME ?= r1000v1_rs485_autoflow
 MODULE_VER ?= 0.0.1
