@@ -13,7 +13,7 @@ Make sure you're running on a reComputer R1000 v1.0 [with its drivers installed]
 ```bash
 $ sudo apt update
 $ sudo apt install raspberrypi-kernel-headers git make gcc -y
-$ git clone https://github.com/bclswl0827/r1000v1-rs485-auto-flow.git
+$ git clone https://github.com/bclswl0827/r1000v1-rs485-autoflow.git
 $ cd r1000v1-rs485-autoflow
 $ make
 $ sudo make install
