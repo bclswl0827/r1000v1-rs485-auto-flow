@@ -59,7 +59,7 @@ Note that this will require a reboot for the changes to take effect.
 
 ## About DKMS
 
-This module is compatible with [DKMS](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html#dkms), which is a kernel module management system. If you're planning to use this module with DKMS, please make sure to install the `dkms` package and use the `make dkms_install` command to install the module.
+This module is compatible with [DKMS](https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support), which is a kernel module management system. If you're planning to use this module with DKMS, please make sure to install the `dkms` package and use the `make dkms_install` command to install the module.
 
 ## License
 
