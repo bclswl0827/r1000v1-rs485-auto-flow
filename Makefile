@@ -1,7 +1,7 @@
 .PHONY: all clean install dkms_install
 
 MODULE_NAME ?= r1000v1_rs485_autoflow
-MODULE_VER ?= 0.0.1
+MODULE_VER ?= 0.0.2
 
 obj-m := $(MODULE_NAME).o
 ccflags-y := -std=gnu11 -Wno-declaration-after-statement \

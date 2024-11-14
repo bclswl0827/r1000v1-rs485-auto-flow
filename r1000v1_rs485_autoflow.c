@@ -132,6 +132,13 @@ static void rs485_worker_oncomplete(struct work_struct* work) {
         schedule_delayed_work(&rs485_worker->work, usecs_to_jiffies(1));
         return;
     }
+
+    // Wait for some time before setting DTR to low, delay is based on baudrate
+    // Each character takes (10 * 1000 / baudrate) milliseconds
+    // Plus 60ns for transceiver mode switch (mentionned in TPT7487 datasheet) 
+    int baudrate = tty_get_baud_rate(rs485_worker->tty);
+    msleep((10 * 1000) / baudrate);
+    ndelay(60);
     rs485_dtr_set(rs485_worker->tty->index, false);
     kfree(rs485_worker);
 }
